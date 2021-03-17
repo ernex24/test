@@ -1,0 +1,124 @@
+/* Theme Provider */
+
+/*Colors*/
+$primary: #052f43;
+$secondary: #ff9400;
+$contrast: #ffffff;
+$background: #f2f4f5;
+$inactive: #eeeeee;
+$h4: #666058;
+$highlight: #b2d8e8;
+$link: #007db3;
+$link-hover: #f3b229;
+$warning: #f3b229;
+$error: #de592e;
+$success: #99cc51;
+$helper: #AABCD6;
+$blackopacity:rgba(0, 0, 0, 0.5);
+$blueopacity:rgba(5, 47, 67, 0.6);
+
+/*Font Colors*/
+$font-primary: #052f43;
+$font-secondary: #ff9400;
+$font-contrast: #ffffff;
+$font-background: #f2f4f5;
+$font-inactive: #eeeeee;
+$font-h4: #666058;
+$font-highlight: #b2d8e8;
+$font-link: #007db3;
+$font-link-hover: #f3b229;
+$font-error: #de592e;
+$font-success: #99cc51;
+$font-helper: #AABCD6;
+
+
+/*Font Colors not adapted*/
+$font-color-h1: #052f43;
+$font-color-h2: #052f43;
+$font-color-h3: #052f43;
+$font-color-h4: #666058;
+
+$font-color-p: #052f43;
+$font-color-pbold: #052f43;
+
+$font-color-description: #666058;
+$font-color-description-bold: #666058;
+
+$font-color-sidebar: #052f43;
+
+$font-color-placeholder: #AABCD6;
+$font-color-label: #AABCD6;
+
+$font-color-link: #007db3;
+$font-color-linkhover: #f3b229;
+
+$font-color-warning: #f3b229;
+$font-color-error: #de592e;
+$font-color-success: #99cc51;
+
+$font-color-contrast: #ffffff;
+$font-color-inactive: #eeeeee;
+
+/*Buttons*/
+$button-primary: #052f43;
+$button-primary-hover: #007db3;
+/*Header*/
+$header-color: #052f43;
+$font-color-header: #ffffff;
+
+
+$font-size-xs: 8px;
+$font-size-s: 12px;
+$font-size-m: 16px;
+$font-size-l: 24px;
+$font-size-xl: 32px;
+$font-size-xxl: 64px;
+
+/* Spaces & Sizing 8pt system */
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 16px;
+$space-l: 24px;
+$space-xl: 32px;
+$space-xxl: 40px;
+$space-xxxl: 48px;
+$space-xxxxl: 56px;
+$space-xxxxxl: 64px;
+$shadow-s: 0 0 16px rgba(0, 0, 0, 0.1);
+$shadow-l: 0 $space-m $space-l -.5em rgba(0, 0, 0, 0.35);
+$borderadius: 3px;
+$borderwidth: 1px;
+$transition: all 0.5s;
+
+/* Fonts */
+@font-face {
+    font-family: "primaryBook";
+    src: url("fonts/vistaSansBook.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "primaryBold";
+    src: url("fonts/vistaSansBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "secondaryLight";
+    src: url("fonts/vistaSlabLigth.woff2") format("woff"); 
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "secondaryBold";
+    src: url("fonts/vistaSlabBook.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}

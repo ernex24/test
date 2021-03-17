@@ -1,0 +1,302 @@
+
+
+/* $Input group */
+
+.alpq-input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.alpq-form-group{
+    display: flex;
+}
+
+
+/* $Input */
+
+.alpq-input-size-xxs {
+    width: var(--alpq-space-xxl);
+}
+
+.alpq-input-size-xs {
+    width: 80px;
+}
+
+.alpq-input-size-s {
+    width: 160px;
+}
+
+.alpq-input-size-m {
+    width: 25%;
+}
+
+.alpq-input-size-l {
+    width: 50%;
+}
+
+.alpq-input-size-xl {
+    width: 100%;
+}
+
+.alpq-input-label{
+    @extend .alpq-textSize-label;
+    margin-bottom: var(--alpq-space-xs);
+    color: var(--alpq-font-color-primary);
+}
+
+.alpq-input {
+    @extend .alpq-textSize-p;
+    @extend .alpq-borderColor-helper;
+    @extend .alpq-borderRadius;
+    height: 40px;
+    padding-left: var(--alpq-space-m);
+    &:disabled{
+        @extend .alpq-bgColor-inactive;
+        @extend .alpq-textColor-gray;
+        border: 0;
+        height: var(--alpq-space-xxxl);
+        min-width: 160px;
+        cursor: default;
+    } &:focus {
+      outline: none;
+      box-shadow: 0 0 4px 2px rgba(0, 125, 179, 0.7);
+    }
+}
+
+
+/* $Checkbox */
+
+/* The container */
+.alpq-checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: var(--alpq-space-xl);
+    margin-bottom: var(--alpq-space-m);
+    cursor: pointer;
+    @extend .alpq-textSize-p;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .alpq-checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .alpq-checkbox-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--alpq-space-l);
+    width: var(--alpq-space-l);
+    background-color: var(--alpq-color-contrast);
+    border: 1px solid var(--alpq-color-primary);
+    border-radius: var(--alpq-borderadius);
+  }
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .alpq-checkbox-container input:checked ~ .alpq-checkbox-checkmark {
+    background-color: var(--alpq-color-contrast);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .alpq-checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .alpq-checkbox-container input:checked ~ .alpq-checkbox-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .alpq-checkbox-container .alpq-checkbox-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 12px;
+    border: solid var(--alpq-color-primary);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+/* $Radio button  */
+
+  /* The container */
+.alpq-radiobtn-container {
+  display: block;
+  position: relative;
+  padding-left: var(--alpq-space-xl);
+  margin-bottom: var(--alpq-space-m);
+  cursor: pointer;
+  @extend .alpq-textSize-p;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .alpq-radiobtn-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .alpq-radiobtn-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: var(--alpq-color-contrast);
+    border: 1px solid var(--alpq-color-primary);
+    border-radius: 50%;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .alpq-radiobtn-container input:checked ~ .alpq-radiobtn-checkmark {
+    background-color: var(--alpq-color-contrast);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .alpq-radiobtn-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .alpq-radiobtn-container input:checked ~ .alpq-radiobtn-checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .alpq-radiobtn-container .alpq-radiobtn-checkmark:after {
+      top: 7px;
+      left: 7px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--alpq-color-primary);
+  }
+
+
+
+  
+/* $Selector  */
+.alpq-selector {
+    position: relative;
+  }
+  
+  .alpq-selector select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: var(--alpq-color-contrast);
+  }
+  
+ /*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 12px;
+    right: 20px;
+    width: 14px;
+    height: 14px;
+    border: var(--alpq-borderwidth) solid transparent;
+    border-color: var(--alpq-color-primary) var(--alpq-color-primary) transparent transparent;
+    transform: rotate(135deg);
+    z-index: 1;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-selected {
+    color: var(--alpq-color-primary);
+    padding: 11px 16px;
+    border: var(--alpq-borderwidth) solid var(--alpq-color-primary);
+    border-color: var(--alpq-color-primary);
+    cursor: pointer;
+    border-radius: var(--alpq-borderadius); 
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: var(--alpq-color-contrast);
+    top: 46px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-left: var(--alpq-borderwidth) solid var(--alpq-color-primary);
+    border-right: var(--alpq-borderwidth) solid var(--alpq-color-primary);
+    border-bottom: var(--alpq-borderwidth) solid var(--alpq-color-primary);
+    border-radius: 0 0 var(--alpq-borderadius) var(--alpq-borderadius);
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: var(--alpq-color-highlight);
+  }
+
+  .select-items div, .same-as-selected {
+    background-color: var(--alpq-color-contrast);
+    padding: 12px;
+  }
+
+
+// Material Design selector 
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px !important;
+  padding: .75em .75em 0 .75em;
+  border: 1px solid var(--alpq-color-primary);
+}
+
+.mat-form-field-underline {
+  display: none !important;
+}
+
+.mat-form-field{
+  display: block !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: .157em .75em 0 .75em !important;
+}
+
+.mat-form-field-label-wrapper {
+  top: -.6em !important;
+}
+
+.mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+  transform: translateY(-15%) !important;
+}
+

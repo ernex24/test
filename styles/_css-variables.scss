@@ -1,0 +1,93 @@
+ 
+/* CSS Custom Properties */
+:root {
+    --alpq-color-primary: #{$primary}; /* set the value with the SASS vars (with interpolation) */
+    --alpq-color-secondary: #{$secondary};
+    --alpq-color-contrast: #{$contrast};
+    --alpq-color-highlight: #{$highlight};
+    --alpq-color-warning: #{$warning};
+    --alpq-color-error: #{$error};
+    --alpq-color-success: #{$success};
+    --alpq-color-h4: #{$h4};
+    --alpq-color-link-hover: #{$link-hover};
+    --alpq-color-helper: #{$helper};
+    --alpq-color-link: #{$link};
+    --alpq-color-inactive: #{$inactive};
+    --alpq-color-background: #{$background};
+    --alpq--color-blackopacity: #{$blackopacity};
+    --alpq--color-blueopacity: #{$blueopacity};
+   
+
+    --alpq-font-color-primary: #{$primary}; /* set the value with the SASS vars (with interpolation) */
+    --alpq-font-color-secondary: #{$secondary};
+    --alpq-font-color-contrast: #{$contrast};
+    --alpq-font-color-highlight: #{$highlight};
+    --alpq-font-color-error: #{$error};
+    --alpq-font-color-success: #{$success};
+    --alpq-font-color-h4: #{$h4};
+    --alpq-font-color-link-hover: #{$link-hover};
+    --alpq-font-color-helper: #{$helper};
+    --alpq-font-color-link: #{$link};
+    --alpq-font-color-inactive: #{$inactive};
+    --alpq-font-color-background: #{$background};
+
+
+    --alpq-font-color-h1: #{$font-color-h1};
+    --alpq-font-color-h2: #{$font-color-h2};
+    --alpq-font-color-h3: #{$font-color-h3};
+    --alpq-font-color-h4: #{$font-color-h4};
+
+    --alpq-font-color-p: #{$font-color-p};
+    --alpq-font-color-pbold: #{$font-color-pbold};
+
+    --alpq-font-color-description: #{$font-color-description};
+    --alpq-font-color-description-bold: #{$font-color-description-bold};
+
+    --alpq-font-color-sidebar: #{$font-color-sidebar};
+
+    --alpq-font-color-placeholder: #{$font-color-placeholder};
+    --alpq-font-color-label: #{$font-color-label};
+
+    --alpq-font-color-link: #{$font-color-link};
+    --alpq-font-color-linkhover: #{$font-color-linkhover};
+
+    --alpq-font-color-contrast: #{$font-color-contrast};
+    --alpq-font-color-inactive: #{$font-color-inactive};
+
+    --alpq-font-color-warning: #{$font-color-warning};
+    --alpq-font-color-error: #{$font-color-error};
+    --alpq-font-color-success: #{$font-color-success};
+
+    --alpq-button-primary: #{$button-primary};
+    --alpq-button-primary-hover: #{$button-primary-hover};
+
+    --alpq-header-color: #{$header-color};
+    --alpq-font-color-header: #{$font-color-header};
+    
+
+    --alpq-font-size-xs: #{$font-size-xs};
+    --alpq-font-size-s: #{$font-size-s};
+    --alpq-font-size-m: #{$font-size-m};
+    --alpq-font-size-l: #{$font-size-l};
+    --alpq-font-size-xl: #{$font-size-xl};
+    --alpq-font-size-xxl: #{$font-size-xxl};
+
+    --alpq-space-xs: #{$space-xs};
+    --alpq-space-s: #{$space-s};
+    --alpq-space-m: #{$space-m};
+    --alpq-space-l: #{$space-l};
+    --alpq-space-xl: #{$space-xl};
+    --alpq-space-xxl: #{$space-xxl};
+    --alpq-space-xxxl: #{$space-xxxl};
+    --alpq-space-xxxxl: #{$space-xxxxl};
+    --alpq-space-xxxxxl: #{$space-xxxxxl};
+
+    --alpq-shadow-s: #{$shadow-s};
+    --alpq-shadow-l: #{$shadow-l};
+
+    --alpq-borderadius: #{$borderadius};
+    --alpq-borderwidth: #{$borderwidth};
+
+    --alpq-transition: #{$transition};
+
+}

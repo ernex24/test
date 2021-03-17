@@ -1,0 +1,22 @@
+.alpq-header{
+    background-color: var(--alpq-header-color);
+    width: 100%;
+    height: var(--alpq-space-xxxxl);
+    top: 0;
+    z-index: 10;
+    box-shadow: var(--alpq-shadow-s);
+}
+
+.alpq-header-logo{
+    height: var(--alpq-space-xl);
+}
+
+.alpq-header-icon{
+    height: var(--alpq-space-xxl);
+    width: var(--alpq-space-xxl);
+    padding: var(--alpq-space-xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

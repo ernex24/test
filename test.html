@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="all" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" media="all" href="content.css">
+    <script src="https://kit.fontawesome.com/2dfcb74320.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/2dfcb74320.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tag-editor/1.0.20/jquery.tag-editor.css" crossorigin="anonymous"></script>
+    <title>Alpiq Styleguide</title>
+</head>
+
+<body class="alpq-textSize-p alpq-bgColor-background">
+
+    <div class="alpq-loader-container">
+        <svg class="alpq-loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+            <circle cx="170" cy="170" r="160" id="circle1" />
+            <circle cx="170" cy="170" r="135" id="circle2" />
+            <circle cx="170" cy="170" r="110" id="circle3" />
+            <circle cx="170" cy="170" r="85" id="circle4" />
+        </svg>
+    </div>
+
+    <div class="alpq-page-container">
+        <div class=" alpq-content-wrap">
+
+            <!-- Header Menu -->
+            <nav id="menu" class="alpq-header alpq-pos-fixed alpq-dist-hor-spaceBetween alpq-pos-vert-center">
+                <img class="alpq-margin-m alpq-header-logo" src="styles/logo/alpiq-logo.svg?sanitize=true">
+                <div class="alpq-pos-end-center">
+                    <!-- <span class="icon-global alpq-margin-right-s"></span>
+                        <div class="alpq-textColor-contrast">Global, English
+                            <span class="icon-carat-down-contrast alpq-margin-left-right-xs"></span>
+                        </div> -->
+                    <span onclick="toggleCorporativeMenu()"
+                        class="icon-menu-hamburger alpq-margin-left-m alpq-margin-right-l "></span>
+                </div>
+            </nav>
+
+            <!-- Sidebar main menu -->
+            <div class="alpq-main-sidebar alpq-pos-fixed">
+                <a href="index.html">
+                    <div class="alpq-main-sidebar-item alpq-pos-column alpq-active">
+                        <span class="icon-home"></span>
+                        <div class="alpq-textSize-sidebar alpq-margin-left-right-s">Home</div>
+                    </div>
+                </a>
+                <a href="atoms.html">
+                    <div class="alpq-main-sidebar-item alpq-pos-column">
+                        <span class="icon-atoms"><span class="path1"></span><span class="path2"></span><span
+                                class="path3"></span></span>
+                        <div class="alpq-textSize-sidebar alpq-margin-left-right-s">Atoms</div>
+                    </div>
+                </a>
+                <a href="molecules.html">
+                    <div class="alpq-main-sidebar-item alpq-pos-column">
+                        <span class="icon-molecules"><span class="path1"></span><span class="path2"></span><span
+                                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                                class="path9"></span></span>
+                        <div class="alpq-textSize-sidebar alpq-margin-left-right-s">Molecules</div>
+                    </div>
+                </a>
+                <a href="organism.html">
+                    <div class="alpq-main-sidebar-item alpq-pos-column ">
+                        <span class="icon-organism"><span class="path1"></span><span class="path2"></span><span
+                                class="path3"></span><span class="path4"></span><span class="path5"></span><span
+                                class="path6"></span><span class="path7"></span><span class="path8"></span><span
+                                class="path9"></span><span class="path10"></span><span class="path11"></span><span
+                                class="path12"></span><span class="path13"></span><span class="path14"></span><span
+                                class="path15"></span><span class="path16"></span><span class="path17"></span><span
+                                class="path18"></span><span class="path19"></span><span class="path20"></span><span
+                                class="path21"></span><span class="path22"></span><span class="path23"></span><span
+                                class="path24"></span><span class="path25"></span><span class="path26"></span><span
+                                class="path27"></span><span class="path28"></span><span class="path29"></span><span
+                                class="path30"></span><span class="path31"></span><span class="path32"></span><span
+                                class="path33"></span><span class="path34"></span><span class="path35"></span><span
+                                class="path36"></span><span class="path37"></span><span class="path38"></span><span
+                                class="path39"></span><span class="path40"></span><span class="path41"></span></span>
+                        <div class="alpq-textSize-sidebar alpq-margin-left-right-s">Organisms</div>
+                    </div>
+                </a>
+                <a href="templates.html">
+                    <div class="alpq-main-sidebar-item alpq-pos-column">
+                        <span class="icon-templates"></span>
+                        <div class="alpq-textSize-sidebar alpq-margin-left-right-s">Templates</div>
+                    </div>
+                </a>
+                <a href="design_tokens.html">
+                    <div class="alpq-main-sidebar-item alpq-pos-column">
+                        <span class="icon-design"></span>
+                        <div class="alpq-textSize-sidebar alpq-margin-left-right-s">Design Tokens</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Sidebar corporative menu -->
+            <div class="alpq-corporative-menu alpq-pos-fixed alpq-corporative-menu-toggle">
+                <div class="alpq-corporative-menu-item">ernesto.perezaraque@alpiq.com</div>
+                <div class="alpq-corporative-menu-divider">Account management</div>
+                <div class="alpq-corporative-menu-item">
+                    <i class="far fa-user-circle"></i> User profile</div>
+                <div class="alpq-corporative-menu-item">
+                    <i class="far fa-envelope"></i> Messages</div>
+                <div class="alpq-corporative-menu-divider">Alpiq software suite</div>
+                <div class="alpq-corporative-menu-item">
+                    <img src="styles/icons/icon-apollo.svg?sanitize=true">Quinn Charge</div>
+                <div class="alpq-corporative-menu-item">
+                    <img src="styles/icons/icon-eutportal.svg?sanitize=true">
+                    </i>Quinn Energy</div>
+                <div class="alpq-corporative-menu-divider">More functionalities</div>
+                <div class="alpq-corporative-menu-item">Item 2</div>
+                <div class="alpq-corporative-menu-item">Item 3</div>
+                <div class="alpq-corporative-menu-item">Item 2</div>
+                <div class="alpq-corporative-menu-item">Item 3</div>
+                <div class="alpq-corporative-menu-logut alpq-pos-fixed">Log out</div>
+            </div>
+
+            <!-- Main container -->
+            <div class="alpq-container">
+
+                <!-- Title + Menu container -->
+                <div class="alpq-bgColor-contrast alpq-bgShadow">
+                    <!-- Title container -->
+                    <div
+                        class="alpq-margin-left-right-xs alpq-padding-top-bottom-s  alpq-dist-hor-baseline alpq-borderRadius">
+                        <p class="alpq-textSize-H2 alpq-pos-start-center alpq-margin-left-s">CAM</p>
+                        <p class="alpq-textSize-p alpq-pos-start-center alpq-margin-left-xs"></p>
+                    </div>
+                </div>
+
+                <!-- Card container -->
+                <div
+                    class="alpq-bgColor-contrast alpq-margin-s alpq-padding-m alpq-borderRadius alpq-bgShadow alpq-card-fullscreen">
+
+                    <!-- Bread Crumbs -->
+                    <!-- <ul class="alpq-margin-left-right-s alpq-breadcrumbs">
+                                <li> <a href="#s">Home</a><i class="flaticon-right-arrow-angle alpq-textColor-inactive"></i></li>
+                                <li>Alpiq design system</li>
+                         </ul> -->
+                    <form autocomplete="off">
+                        <div class="alpq-pos-end-end">
+                            <div class="alpq-input-group alpq-input-size-xl">
+                                <label class="alpq-input-label" for="name">Search query</label>
+                                <input class="alpq-input" autocomplete="off" id="myInput"
+                                    placeholder="contract valid to > 2020" type="text" name="name"
+                                    onfocus="openfilter()" onkeyup="myFunction(); myFunction2()">
+                            </div>
+                            <button class="alpq-btn-primary alpq-margin-left-s"><i
+                                    class="fa fa-search"></i>Search</button>
+                        </div>
+                    </form>
+
+                    <div class="alpq-bgShadow alpq-padding-m alpq-bgColor-contrast alpq-borderRadius setupbox" id="box">
+                        <div style="display: flex; justify-content: space-between;">
+                    
+                        <ul class="alpq-inline-menu">
+                            <li class="alpq-inline-menu-items tablink alpq-inline-menu-items-active" id="defaultOpen"
+                                onclick="openPage('QueryTemplates', this, 'alpq-inline-menu-items-active')">Query
+                                templates</li>
+                            <li class="alpq-inline-menu-items tablink"
+                                onclick="openPage('QuerySuggestion', this, 'alpq-inline-menu-items-active')">Query
+                                suggestion</li>
+                            <li class="alpq-inline-menu-items tablink"
+                                onclick="openPage('SelectTables', this, 'alpq-inline-menu-items-active')">Select tables
+                            </li>
+                            <li class="alpq-inline-menu-items tablink"
+                                onclick="openPage('CreateTables', this, 'alpq-inline-menu-items-active')">Create tables
+                            </li>
+                        </ul>
+
+                        <i class="fas fa-times closebox" onclick="closefilter()" style="cursor: pointer; padding: 8px;"></i>
+                            </div>
+
+                        <div id="QueryTemplates" class="tabcontent">
+                                <h3>Query templates</h3>
+                            <ul id="myUL">
+                                <li>
+                                    <ul class="alpq-textSize-p-bold querytemplatelist">
+                                        <li id="querietemplatelist" onclick="getElementById('myInput').value = ' Wind contract valid > 2021'">
+                                            <a>Wind contracts 2021</a><br>
+                                            <span class="alpq-textSize-label querytemplate">Wind contract valid > 2021</span>
+                                        </li>
+                                        <li id="querietemplatelist" class="alpq-textSize-p alpq-textColor-helper" >
+                                            andrebiler@alpiq.com
+                                        </li>
+                                        <li id="querietemplatelist" class="alpq-textSize-p alpq-textColor-helper">
+                                            Public
+                                        </li>
+                                        <li id="querietemplatelist" class="alpq-textSize-p">
+                                            <i class="far fa-trash-alt opacityhidden"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="alpq-textSize-p-bold querytemplatelist" onclick="getElementById('myInput').value = ' Wind contract valid > 2020'">
+                                        <li>
+                                            <a>Wind contracts 2020</a><br>
+                                            <span class="alpq-textSize-label querytemplate">Wind contract valid > 2020</span>
+                                        </li>
+                                        <li class="alpq-textSize-p alpq-textColor-helper">
+                                            andrebiler@alpiq.com
+                                        </li>
+                                        <li class="alpq-textSize-p alpq-textColor-helper">
+                                            Public
+                                        </li>
+                                        <li class="alpq-textSize-p">
+                                            <i class="far fa-trash-alt opacityhidden"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="alpq-textSize-p-bold querytemplatelist" onclick="getElementById('myInput').value = ' Solar contract valid > 2019'">
+                                        <li>
+                                            <a>Solar contracts</a><br>
+                                            <span class="alpq-textSize-label querytemplate">Solar contract valid > 2019</span>
+                                        </li>
+                                        <li class="alpq-textSize-p alpq-textColor-helper">
+                                            andrebiler@alpiq.com
+                                        </li>
+                                        <li class="alpq-textSize-p alpq-textColor-helper">
+                                            Public
+                                        </li>
+                                        <li class="alpq-textSize-p">
+                                            <i class="far fa-trash-alt opacityhidden"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="alpq-textSize-p-bold querytemplatelist" onclick="getElementById('myInput').value = ' Hydro park'">
+                                        <li>
+                                            <a>Hydro</a><br>
+                                            <span class="alpq-textSize-label querytemplate">Hydro park</span>
+                                        </li>
+                                        <li class="alpq-textSize-p alpq-textColor-helper">
+                                            andrebiler@alpiq.com
+                                        </li>
+                                        <li class="alpq-textSize-p alpq-textColor-helper">
+                                            Public
+                                        </li>
+                                        <li class="alpq-textSize-p">
+                                            <i class="far fa-trash-alt opacityhidden"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="QuerySuggestion" class="tabcontent">
+                            <h3>Query suggestions</h3>
+                            <div class="alpq-dist-hor-spaceBetween">
+                                <button onclick="getElementById('myInput').value +=  Date().toLocaleDateString('de-DE')" class="alpq-btn-secondary-small">Today</button>
+                                <button onclick="getElementById('myInput').value += ' And'" class="alpq-btn-secondary-small">And</button>
+                                <button onclick="getElementById('myInput').value += ' Or'"  class="alpq-btn-secondary-small">Or</button>
+                                <button onclick="getElementById('myInput').value += ' ('"  class="alpq-btn-secondary-small">(</button>
+                                <button onclick="getElementById('myInput').value += ' )'"  class="alpq-btn-secondary-small">)</button>
+                                <button onclick="getElementById('myInput').value += ' >'"  class="alpq-btn-secondary-small">></button>
+                                <button onclick="getElementById('myInput').value += ' <'"  class="alpq-btn-secondary-small"><</button>
+                                <button onclick="getElementById('myInput').value += ' =>'"  class="alpq-btn-secondary-small">=></button>
+                                <button onclick="getElementById('myInput').value += ' <='"  class="alpq-btn-secondary-small"><=</button>
+                                <button onclick="getElementById('myInput').value += ' !='"  class="alpq-btn-secondary-small">!=</button>
+                                <button onclick="getElementById('myInput').value += ' ='"  class="alpq-btn-secondary-small">=</button>
+                                <button onclick="getElementById('myInput').value += ' Is null'"  class="alpq-btn-secondary-small">Is null</button>
+                                <button onclick="getElementById('myInput').value += ' null'"  class="alpq-btn-secondary-small">null</button>
+                                <button onclick="getElementById('myInput').value += ' Is not null'"  class="alpq-btn-secondary-small">Is not null</button>
+                                <button onclick="getElementById('myInput').value += ' And'"  class="alpq-btn-secondary-small">Sort</button>
+                                <button onclick="getElementById('myInput').value += ' And'"  class="alpq-btn-primary-small"> <i class="far fa-save">  </i> Save query </button>
+                            </div>
+                                <div id="sugestion-box" class="sugestions">
+                                <ul class="sugestionlists">
+                                    <li onclick="getElementById('myInput').value +=  ' Solar' ">Solar</li>
+                                    <li onclick="getElementById('myInput').value +=  ' Wind' ">wind</li>
+                                    <li onclick="getElementById('myInput').value +=  ' Contract >'">Contract > </li>
+                                    <li onclick="getElementById('myInput').value +=  ' Contract valid' ">Contract valid </li>
+                                    <li onclick="getElementById('myInput').value +=  ' Contract <' " >Contract < </li>
+                                    <li onclick="getElementById('myInput').value +=  ' Park Wind' " >Park Wind</li>
+                                    <li onclick="getElementById('myInput').value +=  ' Azimuth' " >Azimuth</li>
+                                    <li onclick="getElementById('myInput').value +=  ' Lorem' " >Lorem</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="SelectTables" class="tabcontent">
+                            <h3>Select tables</h3>
+                            <label class="alpq-checkbox-container">Solar
+                                <input type="checkbox">
+                                <span class="alpq-checkbox-checkmark"></span>
+                            </label>
+                            <label class="alpq-checkbox-container">Hydro
+                                <input type="checkbox">
+                                <span class="alpq-checkbox-checkmark"></span>
+                            </label>
+                            <label class="alpq-checkbox-container">Wind
+                                <input type="checkbox">
+                                <span class="alpq-checkbox-checkmark"></span>
+                            </label>
+                            <label class="alpq-checkbox-container">Contracts
+                                <input type="checkbox">
+                                <span class="alpq-checkbox-checkmark"></span>
+                            </label>
+                        </div>
+
+                        <div id="CreateTables" class="tabcontent">
+                            <h3>Create tables</h3>
+                            <p>Who we are and what we do.</p>
+                        </div>
+                    </div>
+
+                    <table style="width:100%; display: none" >
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                          <th>Park Name</th>
+                          <th>Park ID</th> 
+                          <th>Park Technology</th>
+                          <th>Park Start </th>
+                          <th>Park Downregulation ss51</th>
+                          <th>Park IBN From</th>
+                          <th>Park Postal Code </th>
+                          <th>Park Location</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                          <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                          <td contenteditable='true'>Altenrhein</td>
+                          <td contenteditable='true'>Biomasse</td>
+                          <td contenteditable='true'> - </td>
+                          <td contenteditable='true'> - </td>
+                          <td contenteditable='true'>CH-9423</td>
+                          <td contenteditable='true'>5621</td>
+                          <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f2f4f5; height: 40px; text-align: center;">
+                            <td contenteditable='true'>BM Abwasserverband Altenrhein</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                            <td contenteditable='true'>Biomasse</td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'> - </td>
+                            <td contenteditable='true'>CH-9423</td>
+                            <td contenteditable='true'>5621</td>
+                            <td contenteditable='true'>Altenrhein</td>
+                        </tr>
+                      </table>
+
+                    <div class="alpq-pos-center-center" style=" width: 100%; height: 100%;">
+                        <img src="/images/search-image.svg"></img>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="alpq-footer alpq-position-absolute">Alpiq Holding AG all rigths reserved 2020,
+            <a href="#"> privacy policy</a>
+        </div>
+    </div>
+    </div>
+    <script src="./styles/js/functions.js"></script>
+    <script src="https://kit.fontawesome.com/2dfcb74320.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+    
+
+
+    <style>
+        ul {
+            padding: 0;
+        }
+
+        .tabcontent {
+            display: none;
+          
+        }
+
+        ul > li {
+            list-style: none;
+        }
+
+        .setupbox {
+            display: none;
+            position: absolute;
+            right: 16px;
+            left: 16px;
+        }
+
+        .openbox {
+            display: block;
+        }
+
+        .querytemplatelist {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .querytemplatelist:hover {
+            background: var(--alpq-color-inactive);
+        }
+
+        .querytemplatelist:hover .opacityhidden {
+            opacity: 1;
+        }
+
+        .querytemplatelist li {
+            padding: 8px 16px;
+            line-height: 1.2;
+            cursor: pointer;
+            flex-grow: 6;
+            text-align: left;
+        }
+
+        .querytemplatelist li:nth-child(2) {
+            flex-grow: 2;
+        }
+
+        .querytemplatelist li:nth-child(3) {
+            flex-grow: 1;
+        }
+
+        .querytemplatelist li:nth-child(4) {
+            flex-grow: 0;
+        }
+
+        .opacityhidden {
+            opacity: 0;
+            transition: 500ms;
+        }
+        
+        .alpq-card-fullscreen{
+            position: absolute;
+            top: 112px;
+            left: 64px;
+            right: 0;
+            bottom: 32px;
+        }
+    
+
+    </style>
+
+    <script>
+        // Open the box
+        function openfilter() {
+            document.getElementById('box').className = 'alpq-bgShadow alpq-padding-m alpq-bgColor-contrast alpq-borderRadius setupbox openbox';
+        }
+
+        function closefilter() {
+            document.getElementById('box').className = 'alpq-bgShadow alpq-padding-m alpq-bgColor-contrast alpq-borderRadius setupbox';
+        }
+
+        // Change menu in the box
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove('alpq-inline-menu-items-active');
+
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.classList.add(color);
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+        // Filter query templates
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            // ul = document.getElementById("myUL");
+            li = document.getElementsByClassName("querytemplate");
+            // console.log(li);
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = document.getElementsByClassName("querytemplate")[i];
+                // console.log(a);
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].parentElement.parentElement.style.display = "";
+                } else {
+                    li[i].parentElement.parentElement.style.display = "none";
+                }
+            }
+        }
+
+
+           // Filter query templates
+           function myFunction2() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            // ul = document.getElementById("myUL");
+            li = document.querySelectorAll('.sugestionlists > li');
+            // console.dir(li);
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = document.querySelectorAll('.sugestionlists > li')[i];
+                console.log(a);
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+        document.querySelectorAll('.sugestionlists > li').onClick = function() {
+        // for (i = 0; i < li.length; i++) {
+        //         a = document.querySelectorAll('.sugestionlists > li')[i];
+        //         console.log(a);
+        //         txtValue = a.textContent || a.innerText;
+        //         document.getElementById('myInput').value
+        //     }
+        console.log('text');
+    }
+
+    $('input[type="text"]').tagEditor({ initialTags: ['tag1', 'tag2', 'tag3'] });
+
+    </script>
+    <!-- <script>
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) {
+                    return false;
+                }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                box = document.getElementById('sugestion-box');
+                box.appendChild(a);
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+
+        /*An array containing all the country names in the world:*/
+        var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda",
+            "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain",
+            "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia",
+            "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria",
+            "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands",
+            "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands",
+            "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark",
+            "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea",
+            "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France",
+            "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar",
+            "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana",
+            "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland",
+            "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya",
+            "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia",
+            "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi",
+            "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico",
+            "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique",
+            "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia",
+            "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau",
+            "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+            "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa",
+            "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles",
+            "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa",
+            "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent",
+            "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania",
+            "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan",
+            "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
+            "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam",
+            "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"
+        ];
+
+        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+        autocomplete(document.getElementById("myInput"), countries);
+    </script> -->
+
+
+
+    </script>
+
+</body>
+
+</html>

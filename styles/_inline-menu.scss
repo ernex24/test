@@ -1,0 +1,27 @@
+.alpq-inline-menu{
+    position: relative;
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid var(--alpq-color-background);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.alpq-inline-menu-items{
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.alpq-inline-menu-items:hover{
+    color: var(--alpq-color-link) ;
+ }
+
+ .alpq-inline-menu-items-active{
+    font-family: "primaryBold";
+    padding-bottom: 8px;
+    position: relative;
+    border-bottom: 3px solid var(--alpq-color-secondary);
+ }

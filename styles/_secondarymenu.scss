@@ -1,0 +1,118 @@
+.alpq-secondary-header {
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+}
+
+.alpq-secondary-menu {
+    border-top: 1px solid var(--alpq-color-background);
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    z-index: 8;
+}
+
+.alpq-secondary-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: var(--alpq-space-xxl);
+    min-width: 160px;
+    cursor: pointer;
+    color: var(--alpq-color-link);
+    border-right: 1px solid var(--alpq-color-background);
+}
+
+.alpq-secondary-menu-text {
+    height: 100%;
+    width: 100%;
+    padding: var(--alpq-space-s);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.alpq-secondary-menu-item:hover {
+    background-color: var(--alpq-color-highlight);
+}
+
+.alpq-secondary-menu-active {
+    border-bottom: 2px solid var(--alpq-color-secondary);
+}
+
+.alpq-secondary-menu-dropdown-active {
+    display: flex !important;
+}
+
+.alpq-secondary-menu-dropdown {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    z-index: 7;
+}
+
+.alpq-secondary-menu-dropdown-item {
+    width: 100%;
+    padding: var(--alpq-space-s) 0 var(--alpq-space-s) 0;
+}
+
+.alpq-secondary-menu-dropdown-item:hover {
+    background-color: var(--alpq-color-highlight);
+}
+
+.alpq-secondary-menu-item:hover .alpq-secondary-menu-dropdown {
+    display: flex;
+}
+
+.alpq-secondary-megamenu-dropdown {
+    position: absolute;
+    left: 0px;
+    top: 41px;
+    display: none;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    z-index: 7;
+    justify-content: space-around;
+}
+
+.alpq-secondary-menu-item:hover .alpq-secondary-megamenu-dropdown {
+    display: flex;
+}
+
+.alpq-secondary-megamenu-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    border-left: 1px solid var(--alpq-color-background);
+}
+
+.alpq-secondary-megamenu-dropdown-item {
+    width: auto;
+    padding: var(--alpq-space-s);
+}
+
+.alpq-secondary-megamenu-dropdown-item:hover {
+    background-color: var(--alpq-color-highlight);
+}
+
+.alpq-secondary-menu-page-wraper {
+    top: 48px;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--alpq-space-xxxl);
+}
+
+.alpq-secondary-long-menu-page-wraper {
+    top: 106px;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--alpq-space-xxxl);
+}

@@ -1,0 +1,35 @@
+.alpq-status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alpq-status-step-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.alpq-status-bar {
+    width: 100%;
+    height: 2px;
+}
+
+.alpq-status-circle-xl {
+    border-radius: var(--alpq-space-xl);
+    min-width: var(--alpq-space-xl);
+    min-height:var(--alpq-space-xl);
+}
+
+.alpq-status-circle-l {
+    border-radius: var(--alpq-space-l);
+    min-width: var(--alpq-space-l);
+    min-height: var(--alpq-space-l);
+}
+
+.alpq-status-circle-s {
+    border-radius: var(--alpq-space-s);
+    min-width: var(--alpq-space-s);
+    min-height: var(--alpq-space-s);
+}

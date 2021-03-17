@@ -1,0 +1,80 @@
+.alpq-corporative-menu {
+    @extend .alpq-bgColor-contrast;
+    @extend .alpq-bgShadow;
+    height: calc(100% - 56px);
+    width: 320px;
+    top: var(--alpq-space-xxxxl);
+    right: 0;
+    line-height: 1;
+    overflow: scroll;
+    z-index: 2;
+}
+
+.alpq-corporative-menu-toggle {
+    right: -320px;
+    transition: var(--alpq-transition);
+}
+
+.alpq-corporative-menu-item {
+    width: 100%;
+    cursor: pointer;
+    height: var(--alpq-space-xxxl);
+    background-color: var(--alpq-color-contrast);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: var(--alpq-borderwidth) solid var(--alpq-color-background);
+    padding-left: var(--alpq-space-m);
+    padding-right: var(--alpq-space-m);
+    &:hover {
+        background-color: var(--alpq-color-highlight);
+    }
+    &:active {
+        background-color: var(--alpq-color-contrast);
+    }
+}
+
+.alpq-corporative-menu-item>i {
+    margin-left: 0;
+    margin-right: var(--alpq-space-m);
+}
+
+.alpq-corporative-menu-item>img {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 24px;
+    margin-right: var(--alpq-space-m);
+}
+
+.alpq-corporative-menu-divider {
+    @extend .alpq-textSize-sidebar;
+    width: 100%;
+    height: var(--alpq-space-l);
+    background-color: var(--alpq-color-background) ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: var(--alpq-borderwidth) solid var(--alpq-color-background);
+    padding-left: var(--alpq-space-m);
+    padding-right: var(--alpq-space-m);
+}
+
+.alpq-corporative-menu-logut {
+    @extend .alpq-textSize-p;
+    text-align: center;
+    width: inherit;
+    height: var(--alpq-space-xxxl);
+    background-color: var(--alpq-button-primary);
+    color: var(--alpq-font-color-contrast);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--alpq-button-primary-hover);
+    }
+    &:active {
+        background-color: var(--alpq-color-primary);
+    }
+}
